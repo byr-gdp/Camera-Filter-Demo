@@ -12,9 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^10.12.11",
     "ts-loader": "^5.3.1",
     "typescript": "^3.2.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@types/webpack-env": "^1.13.6"
   }
 }

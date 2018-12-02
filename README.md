@@ -14,5 +14,5 @@
 - 性能优化，比如放在 worker 计算，但目前性能有多差还无法量化。
 - 工程：
 
-  - 扫描目录收集 filter 函数。
+  - [x] 扫描目录收集 filter 函数。基于 webpack require.context（需要引入 @types/webpack-env，并设置 tsconfig.json types 字段，否则 ts 编译不过）。
   - 完善 tsconfig 配置。
