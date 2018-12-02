@@ -47,19 +47,18 @@ video.addEventListener('play', function () {
 
   function loop() {
     if (!self.paused && !self.ended ) {
-      if (!canvas) return;
-      if (!canvas) return;
-
       const ctx = canvas.getContext('2d');
       const ctx2 = anotherCanvas.getContext('2d');
       const { width, height } = canvas;
 
       ctx!.drawImage(self, 0, 0, width, height);
       ctx2!.drawImage(self, 0, 0, width, height);
+
       const canvasData = ctx!.getImageData(0, 0, width, height);
       const anotherCanvasData = ctx2!.getImageData(0, 0, width, height);
       const processedCanvasData = filters.simpleGrey(canvasData);
       const processedAnotherCanvasData = filters.anotherGrey(anotherCanvasData);
+      
       ctx!.putImageData(processedCanvasData, 0, 0);
       ctx2!.putImageData(processedAnotherCanvasData, 0, 0);
 
